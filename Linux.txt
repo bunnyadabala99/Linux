@@ -1,0 +1,258 @@
+https://www.magicbricks.com/propertyDetail/the-botanica-luxury-co-living-space-pg-kondapur-in-hyderabad&pgid=4d42333535303335677261646532
+
+https://www.magicbricks.com/propertyDetail/ss-mens-pg-hostel-and-co-living-kondapur-in-hyderabad&pgid=4d42333635353233677261646532
+
+https://www.magicbricks.com/propertyDetail/r3-signature-co-living-pg-kondapur-in-hyderabad&pgid=4d42333535363931677261646532
+
+https://www.magicbricks.com/propertyDetail/samba-siva-pg-for-men-and-women-hitech-city-in-hyderabad&pgid=4d42323436323533677261646532
+
+https://www.magicbricks.com/propertyDetail/svs-comforts-co-live-accommodation-pg-kondapur-in-hyderabad&pgid=4d42333233343939677261646532
+
+https://www.magicbricks.com/propertyDetail/the-canopus-co-living-by-stanar-pg-kondapur-in-hyderabad&pgid=4d42323935363133677261646532
+
+
+File Structure
+* In Linux everything is treated as a file or folder
+* bin and Sbin will be created for every individual user 
+  
+/ - root user
+bin - all cmnds and config files
+Sbin - user information and the related files along with configurations
+boot - System booting information 
+dev - device related and storage attachments & partision files
+etc - user config files like passwd, cmnds 
+mnt - mounting of devices, external storage devices
+lib - all the supporting lib files 
+media - supporting files for all media related files
+opt - all 3rd party files 
+proc - process related information
+sys - system related info like drivers, ram, device related
+var - log files
+usr - user related 
+tmp - temporary files
+
+man cmnd - to get manual for any cmnd
+help cmnd - to get help or options for a cmnd
+apropose action of cmnd - to get cmnd by the action it does
+cmnd double tab - to get relevant cmnds with the short forms of cmnd names
+
+Wildcard
+* --> case sensitive
+? --> first letter after filename will be displayed
+[] --> sequence of files
+> --> redirection or rewrite
+>> --> append 
+
+
+* Linux is command line based & case sensitive
+* Syntax = <command-name> <Options> <inputs>
+* Shell
+  - Bourn Shell
+  - Korn Shell
+  - C shell
+  - Bourn again shell (BASH Shell)
+  - FISH = friendly interactive shell
+  - ZSH
+* We can move to any shell at any time and can use them
+
+CLI Connectivity
+* local Connect:
+    - Boot, linux os,
+    - username, passowrd
+* Remote Connect:
+    - Server <-----> client
+    - TELNET with IP (Not secure)
+    - SSH (Secured)
+    - putty in windows using SSH 	
+
+Remote GUI Connectivity
+    - VNC
+	- Tiger VNC
+	- Team viewer
+	- Damewear
+	
+
+Basic Commands
+
+Sudo                                                  = To change from normal user to root user(super user do) 
+Su                                                    = To Substute user
+exit                                                  = logout
+$                                                     = Normal user
+#                                                     = Root user
+<any command> -h or --help                            = helps to find it's options to command
+man <any command>                                     = it gives manual details of command
+ls                                                    = listing
+ls -l                                                 = long listing
+ls -lr                                                = to print the list in reverse format
+ls -lt                                                = gives latest file time stamp
+ls -ltr                                               = gives reverse time stampt order (old - new)
+ls -la                                                = to get hidden files ( it starts with .)
+ls *filename                                          = gives all the files ending with filename given
+pwd                                                   = Present working directory
+cd /                                                  = root directory
+cd                                                    = home directory
+cd ..                                                 = to go one step back to directory
+touch                                                 = to create file
+tree                                                  = to see structural data 
+cat file name                                         = to read the file data 
+cat > file name                                       = to create & add the data
+cat /proc/cpuinfo                                     = it will give all cpu, procesor details
+cat /proc/meminfo                                     = it will give mem info 
+>                                                     = redirection, to delete & add the data using Cat cmd
+>>                                                    = to append the data only 
+mkdir                                                 = to create directory
+cp source destination                                 = to copy file
+cp source directory destination directory -r          = to copy directory that contains files recursively 
+mv source destination                                 = to move file
+mv source directory destination directory             = to directory folder
+rm directory                                          = to delete directory
+rm -r directory                                       = to delete directory contain files
+grep word filename                                    = to find words inside a file
+grep - i word filename                                = to find word without case sensitive or case insensitive
+head  filename                                        = gives first lines of data in file
+head -n 5 filename                                    = give first 5 lines of the file 
+tail  filename                                        = gives last lines of data in file
+tail -n 5 filname                                     = gives last 5 lines of data in file 
+echo $?                                               = if it gives 0( success ) or 1(failure)
+tar -xf <file-name>                                   = to extract the tar extension file
+echo $tarfile                                         = gives the downloaded link for the file 
+echo $taffile | cut -d "separator" -f1                = gives the first part before the separator
+echo $tarfile | cut -d "/" -f3                        = gives the third part of the link
+echo $taffile | rev | cut -d "separator" -f1 |rev     = first it converts the o/p in reverse and gives first fragment and reverses again 
+echo $TARFILE | awk -F "/"  '{print $1}'              = print the first part of the link
+echo $TARFILE | awk -F "/"  '{print $NF}'             = print the last fragment of the link 
+Chmod                                                 = to change the permissions to file or folder
+Chmod u+w g+r filename                                = to change permissions of user-write, group-read of file
+chmod 417                                             = to change permissions of user-read, group-execute, others-all
+
+chmod  user, group, others
+         u     g      o
+
+read    4
+Write	2	 
+execute 1
+
+VIM Editor commands
+3 modes = ESC, colon, Insert
+
+Colon Mode
+:/                                                    = to search from top in a vim
+:?                                                    = to search from bottom in a vim
+: set nu                                              = to provide numbers for each line in a file of vim
+: set nonu                                            = to remove numbers from each line in a file of vim
+:set ic                                               = to highlight both capital & small case sensitivies
+:set noic                                             = to highlight only small letter case insensitive
+:noh                                                  = don't highlight
+:q                                                    = to exit the file 
+:number                                               = to courser at numbered line
+:wq and enter                                         = to save and exit
+:q!                                                   = to exit wihtout saving
+:%s<word to replace>/<new word>                       = to replace a word in vim file
+:3s<word to replace>/<new word>                       = to replace a word in 3rd line
+:%s<word to replace>/<new word>/g                     = to replace the words globally in the file
+:%d*                                                  = to delete all the data in a file
+
+ESC Mode
+u                                                     = to undo the change in ESC mode
+yy                                                    = to copy the change in ESC mode
+d                                                     = to cut the last line in ESC mode
+p                                                     = to paste the last change in ESC mode
+10dd                                                  = to cut the last 10 lines
+10p                                                   = line will be copied 10 times
+
+Network Commands
+
+who                                                   = to get info about users logged in 
+whatis                                                = gives info about command or arguments
+history                                               = gives list of commands ran in the current session
+Ctrl + R command                                      = gives the previous command related to our typing
+ssh-Keygen                                            = To Generate both public & private Keys. 
+ssh-Keygen -f <filename>                              = To Generate both public & private Keys with the file name.
+ssh - i <private key> username@IP                     = To connect to the machine using private key with IP.
+Uname                                                 = gives information about machine OS.
+Uname - a                                             = gives full information of VM like OS, IP, Location, Launch Time.
+man uname                                             = gives full details with parameters of command
+ps -ef                                                = to get full details about running processes 
+ps -ef | grep process                                 = to find any particular process
+top                                                   = gives information about processes running with more memory.
+kill PID                                              = to stop any process
+kill -9 PID                                           = to stop the process forcefully
+Ping sitename or IP address                           = to check the connection with other host 
+netstat                                               = gives the details about the connections
+netstat -n                                            = gives total no. of protocals & connections
+pathping                                              = gives the routing hop path of the ping
+tracert IP address                                    = it gives the information about route hops 
+nslookup                                              = to check the DNS & IP address
+ipconfig                                              = to check the IP, gateway and other details of our machine
+ipconfig /all                                         = to check all the details like bluetooth connectivity and other machine details
+route print                                           = to check the complete routing of the machine
+hostname                                              = to check the name of the machine
+getmac                                                = to check the mac address of the machine
+tasklist                                              = to check the task manager list
+taskkill PID                                          = to kill a task
+systeminfo                                            = complete details of system
+net view                                              = to view any connected devices to our machine
+msinfo32                                              = gives a graphical view of systeminfo
+free                                                  = to see how much mem is free & used
+df -h                                                 = to check all the disk details 
+df =hT                                                = to understand the type of disk 
+du -sh                                                = to check mem utilized by the directory
+find /etc -name <file-name>                           = to find the file 
+netstat -ltnp                                         = to check the ports listeing from your machine 
+telnet IPaddress port no.                             = to check the connection happening with other server
+
+
+User Management
+
+* only root user can create users
+* root user id is 0
+* every user have 2 groups 
+  - primary group - secondary group
+* CRUD
+  C - create
+  R - Read
+  U - Update
+  D - Delete
+  
+useradd <user-name>                                   = to create the user
+passwd  <user-name>                                   = to create passowrd to the user
+id                                                    = to see current user details 
+id      <user-name>                                   = to see the details of user
+getent passwd                                         = to get passwd file
+userdel <user-name>                                   = to delete user
+groupadd  <group-name>                                = to create new group
+usermod -a -G <user-name> <group-name>                = to add user to secondary group
+usermod - g <user-name> <group-name>                  = to add user to primary group or changed to new group as default group
+gpasswd -d user-name> <group-name>                    = to delete user from the group 
+vim /etc/ssh/sshd_config                              = to give passowrd authentication "yes" as user should login with passwd
+
+
+
+Package management
+
+*yum - yellow dog utility management
+*rpm - redhat package management     --> it cannot resolve dependency of package
+
+yum list installed                                    = to show all installed packages
+yum list installed | wc -l                            = gives count of installed packages (wc = word count)
+yum list all                                          = gives all available list of packages
+yum list all | wc -l                                  = gives count of available packages (l = no. of lines)
+yum update -y                                         = to update all the packages in machine
+yum list available                                    = gives list of available apart from the installed
+yum remove <package-name>                             = to remove package
+
+Service Management
+
+Systemctl install <service-name>                      = to install the service package
+Systemctl start <service-name>                        = to start the service
+Systemctl status <service-name>                       = to check status of the service
+Systemctl enable <service-name>                       = to enable the service start from 
+Systemctl disable <service-name>                      = to disable the service 
+wget <URL>                                            = to download the file
+curl <URL>                                            = to print runtime data or to view the source
+scp -i pemfile source username@ipaddress:<destination>= to securly copy files from one host to other 
+
+
+
+ 
+
